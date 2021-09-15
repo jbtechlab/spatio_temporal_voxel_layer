@@ -152,7 +152,7 @@ private:
     const std::shared_ptr<std_srvs::srv::SetBool::Request> request,
     std::shared_ptr<std_srvs::srv::SetBool::Response> response,
     const std::shared_ptr<buffer::MeasurementBuffer> buffer,
-    std::vector<std::shared_ptr<message_filters::SubscriberBase<>>> _observation_subscribers;
+    const std::shared_ptr<message_filters::SubscriberBase<>> & subcriber);
 
   laser_geometry::LaserProjection _laser_projector;
   std::vector<std::shared_ptr<message_filters::SubscriberBase<>>> _observation_subscribers;
